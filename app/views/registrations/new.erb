@@ -1,0 +1,11 @@
+<h1> Register a camper! </h1>
+
+<%= form_for @registration do |f| %>
+    <%= f.label "Camper" %>
+    <%= f.collection_select :camper_id, @campers, :id, :name %> <br>
+    
+    <%= f.label "Activity" %>
+    <%= f.collection_select :activity_id, @activities, :id, :name %> <br>
+
+    <%= f.submit "Register!" %>
+<% end %>
